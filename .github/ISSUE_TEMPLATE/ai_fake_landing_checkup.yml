@@ -1,0 +1,66 @@
+name: AI 假落地体检（公开版）
+description: 提交一个公开、非隐私的 AI 项目描述，获取基础风险提示。不要提交密钥/源码/隐私。
+title: "[体检] "
+labels: ["ai-checkup", "lead-intake"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢提交。请只填写可以公开的信息。不要提交密钥、源码、客户资料、隐私数据或商业机密。
+        本体检不承诺收益，不构成投资/法律/财务建议。
+  - type: textarea
+    id: one_sentence
+    attributes:
+      label: 项目一句话
+      description: 这个 AI 项目想解决什么问题？
+    validations:
+      required: true
+  - type: input
+    id: target_user
+    attributes:
+      label: 目标用户
+      description: 谁会用它？
+    validations:
+      required: true
+  - type: dropdown
+    id: main_goal
+    attributes:
+      label: 当前主目标
+      options:
+        - 省钱
+        - 提效
+        - 获客
+        - 交付
+        - 收款
+        - 还不确定
+    validations:
+      required: true
+  - type: textarea
+    id: ai_tools
+    attributes:
+      label: 正在使用的 AI 工具/流程
+      description: 只写公开可说的信息。
+    validations:
+      required: true
+  - type: textarea
+    id: biggest_blocker
+    attributes:
+      label: 当前最大卡点
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 公开链接或截图说明（可选）
+      description: 不要上传隐私、密钥、源码或客户资料。
+    validations:
+      required: false
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: 安全确认
+      options:
+        - label: 我没有提交密钥、源码、客户隐私或商业机密。
+          required: true
+        - label: 我理解本体检不承诺收益。
+          required: true
